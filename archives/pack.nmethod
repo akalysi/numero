@@ -1,0 +1,20 @@
+m=9111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111199
+=9111111111199
+=9911111111119
+=Add 100 to slot=Add 10 to slot=Allocate 10 slots of memory-s=
+09399119959099391539939
+=093991199590993915
+=9399199691996995990993915
+=Compact first three slots into one, value being 2nd minus 3rd slot=Remove 1st slot, set 3rd to 2nd minus 3rd=Let the user use a subtractor using the first three slots-a=
+99111119
+=9911111111119
+=991111111111111119
+=Allocate 5 slots of memory=Allocate 10 slots of memory=Allocate 15 slots of memory-^=
+mmmmmmmm933991mmmmmmmm911111991mmmmmmmm9333991mmm911991mmmmmm911991mmm91199 9929096 9909969
+=mmmmmmmm9111991mmmmmmmm91111991mmmmmmmm911991mmm911991mmmmmm911991mmm91199 9929096 9906
+=mmmmm933991mmmmm9333991mmmmm93991mmm911991mmmmmm911991mmm91199 9929096 9909979
+=Take formatted numerical input=Take formatted string input=Take formatted conditional input-H=
+8989111111111119mmmmmmm911991mmmmmmm93991mmmmmmmm93333991mmmmmmmm93333991mmmmmmmm93991mmm911991mmmmmmmmm9333991mmmmmmmm93991mmmmmmmm911991mmmmmmmm93333991mmmmmmm933991099299499
+=899111119mmmmmmm911991mmmmmmm93991mmmmmmmm93333991mmmmmmmm93333991mmmmmmmm939911099299499
+=89889111119mmmmmmmmm9333991mmmmmmmm93991mmmmmmmm911991mmmmmmmm93333991mmmmmmm933991099299499
+=Print "HELLO WORLD" from scratch=Print "HELLO" from scratch=Print "WORLD" from scratch-
