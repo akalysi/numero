@@ -21,12 +21,25 @@ mmmmmmm9339910992994980
 
 ```
 * Example of conditions
-* This 7 in the next line is on mode 3 and takes input from the user
+* This 7 in the next line is on mode 1 and evaluates the input from the user, conducted by the 6 on 3.
 * If they say 1, my program decides to not skip line 6, but if they say anything else, that "HELLO WORLD" program is getting skipped.
 
-89891111111111179
-mmmmmmm911991mmmmmmm93991mmmmmmmm93333991mmmmmmmm93333991mmmmmmmm93991mmm911991mmmmmmmmm9333991mmmmmmmm93991mmmmmmmm911991mmmmmmmm93333991mmmmmmm93399099299499
+898911111111111697
+9939mmmmmmm911991mmmmmmm93991mmmmmmmm93333991mmmmmmmm93333991mmmmmmmm93991mmm911991mmmmmmmmm9333991mmmmmmmm93991mmmmmmmm911991mmmmmmmm93333991mmmmmmm93399099299499
 9980
+```
+
+```
+* Conditions can also be stacked. The 777 in this prorgam skips 3 lines, which should make this turing complete? I'm no expert.
+
+9919777
+990
+9490
+94490
+944490
+9444490
+94444490
+944444490
 ```
 
 ## Calculator
@@ -81,14 +94,14 @@ Divider:
 Combined:
 
 ```
-9979
-9911691996959490
-9979
-99111993991996919969959909939159490
-9979
-9911691996995490
-9979
-991191996939969199599490
+991697
+99311691996959490
+99697
+993111993991996919969959909939159490
+99697
+99311691996995490
+99697
+9931191996939969199599490
 990
 
 * This program is a mashup of all the components I made first.
@@ -102,4 +115,12 @@ Combined:
 * Do you want to use division? (0/1)
 
 * When you select one to use, it inputs 2 numbers, shows the output, and exits.
+```
+
+## Truth machine
+
+```
+99167979
+4
+4
 ```

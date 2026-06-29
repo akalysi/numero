@@ -74,7 +74,10 @@ Mode = 1
 MethodMode = 1
 Debug = ""
 Loggers = Printlogs=="1"
-Skipline = false
+
+Skipline = 0
+Prerepeatline = false
+Repeatline = false
 
 function Log(l)
     Debug=Debug..l.." - "
@@ -130,7 +133,7 @@ function Mode1(char, blog)
     elseif char == "7" then
         if Data[Pointer] == nil then return end
         if Data[Pointer] ~= 1 then
-            Skipline = true
+            Skipline = Skipline + 1
         end
         if blog then Log("Skip next line if slot is not 1") end
     elseif char == "8" then
@@ -173,7 +176,7 @@ function Mode2(char, blog)
     elseif char == "7" then
         if Data[Pointer] == nil then return end
         if Data[Pointer] == 0 then
-            Skipline = true
+            Skipline = Skipline + 1
         end
         if blog then Log("Skip next line if slot is 0") end
     elseif char == "8" then
@@ -219,10 +222,11 @@ function Mode3(char, blog)
         Data[Pointer] = io.read("n")
         if blog then Log("Set slot to user input (num)") end
     elseif char == "7" then
-        if io.read("n") ~= 1 then
-            Skipline = true
+        if Data[Pointer] == nil then return end
+        if Data[Pointer] ~= 0 then
+            Prerepeatline = true
         end
-        if blog then Log("Skip next line if user input is not 1") end
+        if blog then Log("Repeat line until slot is -1") end
     elseif char == "8" then
         Methods = {}
         if blog then Log("Unload methods") end
@@ -237,12 +241,13 @@ function Main(content, blog)
     end
 
     for i = 1, #lines do
+        ::repeatline::
         local line = string.gsub(lines[i], "^%s*(.-)%s*$", "%1")
         if line:sub(1, 1) == "*" then
             goto continueline
         end
-        if Skipline then
-            Skipline = false
+        if Skipline > 0 then
+            Skipline = Skipline - 1
             goto continueline
         end
         for i = 1, #line do
@@ -281,10 +286,14 @@ function Main(content, blog)
 
             ::continue::
         end
+        if Repeatline then
+            goto repeatline
+        end
+        if Prerepeatline then
+            Repeatline = true
+        end
         ::continueline::
     end
-
-    -- TODO: make it so that you have to exit hehe
 end
 
 if file then
